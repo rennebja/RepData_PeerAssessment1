@@ -78,7 +78,9 @@ The 5-minute interval showing the greated average activity is **835**
 
 ## Imputing missing values
 
-Let's take another look at the total number of steps per day. This time, we'll impute any missing data rather than ignoring it by setting NA values equal to the average for that particular 5-minute interval.
+Let's take another look at the total number of steps per day. There were quite a lot of missing values in the dataset. 2304 missing values to be exact.
+
+This time, we'll impute any missing data rather than ignoring it by setting NA values equal to the average for that particular 5-minute interval.
 
 
 ```r

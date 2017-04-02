@@ -180,7 +180,8 @@ ggplot(intvalgrp, aes(interval, Avg.Steps))+geom_line()+
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
-<p>Let’s take another look at the total number of steps per day. This time, we’ll impute any missing data rather than ignoring it by setting NA values equal to the average for that particular 5-minute interval.</p>
+<p>Let’s take another look at the total number of steps per day. There were quite a lot of missing values in the dataset. 2304 missing values to be exact.</p>
+<p>This time, we’ll impute any missing data rather than ignoring it by setting NA values equal to the average for that particular 5-minute interval.</p>
 <pre class="r"><code>iactivity &lt;- left_join(activity, intvalgrp, by = c(&quot;interval&quot; = &quot;interval&quot;))
 iactivity[is.na(iactivity$steps),1] &lt;- iactivity[is.na(iactivity$steps),4]
 iactivity &lt;- iactivity[,1:3]
